@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Login Page -->
+    <div id="loginPage" class="container">
+        <h1>BookHub Login</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Profile Page -->
+    <div id="profilePage" class="container" style="display:none;">
+        <div class="header">
+            <div class="menu" onclick="toggleMenu()">⋮</div>
+            <div id="menuDropdown" class="dropdown-content" style="display:none;">
+                <a href="#" onclick="goToIssueBooks()">Issue Books</a>
+            </div>
+        </div>
+        <h1>YOUR PROFILE</h1>
+        <p><strong>Name:</strong>Razeen</p>
+        <p><strong>Class:</strong> S3A</p>
+        <p><strong>College:</strong> College of Engineering Chengannur</p>
+        <p><strong>Email:</strong> razeen@gmail.com</p>
+        <p><strong>Due Date of Issued Book:</strong> <span id="dueDate">N/A</span></p>
+    </div>
+
+    <!-- Issue Books Page -->
+    <div id="issueBooksPage" class="container" style="display:none;">
+        <div class="header">
+            <div class="menu" onclick="toggleMenu()">⋮</div>
+            <div id="menuDropdown" class="dropdown-content" style="display:none;">
+                <a href="#" onclick="goToProfile()">Profile</a>
+            </div>
+        </div>
+        <h1>Available Books</h1>
+        <div id="bookList">
+            <!-- Books info will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
